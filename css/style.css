@@ -65,6 +65,10 @@ body{
 .main-nav-contact {
     display: flex;
     margin-left:auto;
+    
+}
+.main-nav-contact .out-navigation{
+    align-items: center;
 }
 .logo{
     display: inline;
@@ -106,6 +110,10 @@ body{
 {
     color: var(--accent);
 }
+.out-navigation:hover .ico-contact,
+.out-navigation:focus .ico-contact{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .current{
     color: var(--accent);
 }
@@ -121,6 +129,11 @@ body{
     padding-bottom: 32px;
     padding-top: 32px;
    
+}
+.ico-contact{
+    margin-right: 10px;
+    align-items: center;
+    fill:currentColor;
 }
 
 /* -----Hero-----*/
@@ -182,6 +195,13 @@ body{
 .down-section{
     padding-top: 101px;
     padding-bottom: 101px;
+}
+.ico-feature-list{
+    background-image: url('../images/icon/symbol-defs.svg#icon-antenna');
+    background: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 25px 100px 25px 100px;
 }
 .hiden-text{
     visibility: hidden;
@@ -263,7 +283,7 @@ body{
     
 }
 
-.teem .list{
+.teem-conteiner{
     margin-right: 30px;
     
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -272,7 +292,7 @@ body{
     border-radius: 0px 0px 4px 4px;
     background-color: var(--paragraf-color);
 }
-.teem .list:last-child {
+.teem-conteiner:last-child {
     margin-right: 0;
 }
 .teem img{
@@ -283,6 +303,33 @@ body{
 .teem-part-text{
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.teem-part-text ul{
+    padding-right: 32px;
+    padding-left: 32px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.ico-sm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #AFB1B8;
+    border: 1px solid transparent;
+    background-color: transparent;
+    width: 44px;
+    height: 44px;
+   
+}
+.ico-sm:hover,
+.ico-sm:focus{
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    fill: var(--page-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
 }
 .teem-name{
     font-weight: 500;
@@ -295,13 +342,14 @@ body{
 .teem-profession{
     font-weight: 400;
     font-size: 16px;
-    
+    margin-bottom: 16px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--adress-color); 
 }
 /*--------regular-client-----*/
+
 .regular-client{
     padding-top: 94px;
     padding-bottom: 94px;
@@ -310,11 +358,26 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.regular-client .list{
+.regular-client-ico{
+  
+    
+    fill: #AFB1B8;
+    
+}
+.regular-client-li {
     padding: 16px 32px 16px 32px;
     border: 1px solid #AFB1B8;
-   
+    fill: #AFB1B8;
     border-radius: 4px;
+}
+.regular-client-li:focus .regular-client-ico,
+.regular-client-li:hover .regular-client-ico,
+.regular-client-li:hover,
+.regular-client-li:focus
+{
+    border-color: #2196F3;
+  
+    fill: var(--accent);
 }
 /* -----Footer-----*/
 .footer{
@@ -322,6 +385,12 @@ body{
     background-color: var(--footer-bcg);
     padding-top: 60px;
     padding-bottom: 60px;
+    display: block;
+}
+.footer .conteiner{
+    display: flex;
+    align-items: baseline;
+
 }
 .logo-footer{
     display: block;
@@ -346,6 +415,8 @@ body{
 }
 .adress-footer{
     font-style: normal;
+    box-sizing: content-box;
+
 }
 
 .adress-footer .list{
@@ -357,12 +428,52 @@ body{
 
     margin-bottom: 0px;
 }
-.adress-footer img{
-    width: 100%;
-    height: auto;
+.footer-link{
+    margin-left: 70px;
+}
+.footer-link ul{
     display: block;
 }
+.footer-link-text{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+.footer-link ul {
+    width: 206px;
+   
+    display: flex;
+    justify-content: space-between;
 
+}
+
+.ico-sm-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--page-color);
+    border: 1px solid transparent;
+    background-color:rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+
+}
+
+.ico-sm-footer:hover,
+.ico-sm-gooter:focus {
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    fill: var(--page-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
 /* -----Portfolio-----*/
 .portfolio-section {
     color: var(--page-color);
@@ -398,6 +509,9 @@ body{
     letter-spacing: 0.03em;
     color: var(--paragraf-color);
     background-color: var(--accent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-button{
     display: flex;
@@ -422,8 +536,9 @@ body{
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
-    border: 1px solid var(--border-portgolio);
-    
+    border-right: 1px solid var(--border-portgolio);
+    border-left: 1px solid var(--border-portgolio);
+    border-bottom: 1px solid var(--border-portgolio);
 }
 .portfolio-item li:hover,
 .portfolio-item li:focus{
