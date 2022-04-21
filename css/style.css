@@ -369,16 +369,20 @@ body{
 .regular-client-ico{
     fill: #AFB1B8;    
 }
-.regular-client-li{
+
+.regular-client-li a{
+    display: block;
     padding: 16px 32px 16px 32px;
     border: 1px solid #AFB1B8;
     fill: #AFB1B8;
     border-radius: 4px;
+  
 }
+
 .regular-client-li:focus .regular-client-ico,
 .regular-client-li:hover .regular-client-ico,
-.regular-client-li:hover,
-.regular-client-li:focus
+.regular-client-li a:hover,
+.regular-client-li a:focus
 {
     border-color: #2196F3;
   
